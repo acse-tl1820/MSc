@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.black-btn {
+    @apply inline-flex items-center px-4 py-2 bg-gray-800 dark:bg-gray-200 border border-transparent rounded-md font-semibold text-xs text-white dark:text-gray-800 uppercase tracking-widest hover:bg-gray-700 dark:hover:bg-white focus:bg-gray-700 dark:focus:bg-white active:bg-gray-900 dark:active:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 justify-center
+}
+
+.card {
+    @apply bg-white dark:bg-gray-800 shadow-md dark:shadow-none rounded-lg p-4 flex flex-col gap-10 border border-gray-300 w-36
+}
+
+/*emoji picker*/
+
+.emoji-picker {
+    position: relative;
+    display: inline-block;
+}
+
+.emoji-list {
+    position: absolute;
+    bottom: 100%;
+    left: -60px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 140px;
+    height: 200px;
+    box-shadow: 0 2px 10px #0000001a;
+}
+
+.emoji-item {
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: transform 0.2s;
+}
+
+.emoji-item:hover {
+    transform: scale(1.2);
+}
+
+.emoji-picker button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+}
+.modal-content {
+    color:white;
+    background-color: black;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.close {
+    cursor: pointer;
+    float: right;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -20px;
+    margin-right: -10px;
+}
+
+#myModal label {
+    text-align: left;
+}
+
